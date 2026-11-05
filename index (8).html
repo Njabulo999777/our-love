@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Our Little Universe ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5EBDD;--card:#FFFDF8;--vint:#E8D4C1;--rose:#E9A9BA;--wine:#6E2A3F;--acc:#A64D63;--ink:#382B2B;--mute:#79685D}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);min-height:100vh;background:radial-gradient(circle at 12% 15%,#E8D4C1 0,transparent 35%),radial-gradient(circle at 90% 85%,#F0D5D8 0,transparent 30%),var(--paper)}
+.wrap{max-width:480px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 16px 70px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.bar{flex:1;height:6px;background:var(--vint);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--acc));transition:width .8s}
+#mus{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--acc);background:var(--card);font-size:17px;cursor:pointer}
+.card{position:relative;background:var(--card);border:1px solid #E8D8C7;border-radius:4px;padding:30px 22px 26px;box-shadow:0 10px 35px rgba(70,45,35,.13);min-height:60vh;animation:flip .6s}
+.card::before{content:"";position:absolute;top:-12px;left:50%;width:110px;height:26px;transform:translateX(-50%) rotate(-2deg);background:repeating-linear-gradient(45deg,#E9A9BA99 0 8px,#F7D9E199 8px 16px)}
+@keyframes flip{from{opacity:0;transform:perspective(900px) rotateY(-12deg) translateX(16px)}to{opacity:1;transform:none}}
+.vig{width:116px;height:116px;margin:0 auto 6px;display:grid;place-items:center;font-size:58px;background:#fff;border-radius:50%;border:2px dashed var(--rose);box-shadow:0 5px 14px rgba(110,42,63,.14);animation:pop .7s}
+@keyframes pop{from{transform:scale(.4) rotate(-20deg);opacity:0}}
+h1,h2{font-family:'Playfair Display',serif;font-weight:600;line-height:1.15;text-align:center}
+h1{font-size:clamp(42px,12vw,58px);margin:12px 0}h1 em{color:var(--acc);font-weight:500}h2{font-size:23px;margin:10px 0 18px;color:var(--wine)}
+.ctr{text-align:center}.sm{font-size:11px;letter-spacing:3px;color:#9C7C6B}
+.ln{font:500 17px/1.85 'Playfair Display',serif;margin:0 0 14px;animation:fade .5s}.ln.h{font:700 25px/1.3 Caveat,cursive;color:var(--wine)}.ln.y{font-style:italic;color:var(--acc)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.hint{text-align:center;font-size:12px;color:#B7A090;letter-spacing:2px;margin-top:14px;animation:blink 1.6s infinite}@keyframes blink{50%{opacity:.3}}
+.btn{background:var(--acc);color:#fff;border:0;padding:14px 28px;border-radius:30px;font:500 15px 'DM Sans';cursor:pointer;margin:14px 4px 0;transition:.25s}.btn:hover{background:var(--wine);transform:translateY(-3px)}
+.btn.g{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}
+.q{font:600 20px/1.4 'Playfair Display';margin:6px 0 16px}.prog{font-size:11px;letter-spacing:2px;color:#9C7C6B}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--vint);border-radius:10px;padding:13px 15px;margin-bottom:10px;font:15px 'DM Sans';color:var(--ink);cursor:pointer;transition:.2s}
+.opt:not(:disabled):hover{border-color:var(--acc);transform:translateX(4px)}.opt.right{background:#E9F4E4;border-color:#7FB069}.opt.wrong{background:#FCE8EA;border-color:var(--acc);animation:sh .4s}
+@keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.fb{background:#FFF6E0;border-left:4px solid var(--rose);padding:11px 14px;margin:12px 0 2px;font:700 24px/1.3 Caveat,cursive;color:var(--wine);transform:rotate(-.5deg);animation:fade .4s}
+input{width:100%;padding:14px;border:1.5px solid var(--vint);border-radius:10px;font:16px 'DM Sans';text-align:center;margin:6px 0;background:#fff}
+input:focus,button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.pol{background:#fff;padding:9px 9px 6px;width:200px;margin:8px auto 20px;transform:rotate(var(--r));box-shadow:0 6px 16px rgba(0,0,0,.16);animation:pop .7s}
+.ph{position:relative;aspect-ratio:1;background:linear-gradient(135deg,#F3DDE1,#E8D4C1);display:grid;place-items:center;font-size:50px;overflow:hidden}.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pol figcaption{font:500 21px Caveat;color:var(--wine);text-align:center;padding-top:6px}
+.cv .pol{width:min(270px,80%);padding:11px 11px 8px}.cv .ph{aspect-ratio:3/4}
+.fl{position:fixed;bottom:-30px;pointer-events:none;color:var(--rose);animation:up linear forwards;z-index:0}@keyframes up{to{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+.fall{position:fixed;top:-30px;pointer-events:none;z-index:20;animation:dn linear forwards}@keyframes dn{to{transform:translateY(112vh) rotate(540deg)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* ======== EDIT YOUR STORY HERE ======== */
+const C={her:"Her Name",me:"Your Name",cover:"assets/images/cover.jpg",music:"assets/music/song.mp3",date:"Saturday, 7pm",plan:"Dinner somewhere lovely, then a walk wherever you choose."};
+/* step types: s=new scene (emoji,heading) | t=story line (w:'h' handwritten,'y' you) | ph=photo | q=quiz set | c=choice | r=riddle | end */
+const A=[{q:"Where did our story begin?",o:["Through mutual friends","At school","Online","A total accident"],a:0,r:"Okayyyy, someone has been paying attention. ❤️",w:"Wrong, but I love the confidence. Think harder, detective."},
+{q:"Who said hi first?",o:["Me, obviously","You, boldly","Nobody. Awkward silence","A friend forced us"],a:1,r:"Correct. You were braver than me and I'll never forget it.",w:"Nope. I was nervous, so you can't blame me."},
+{q:"What did I think when I first saw you?",o:["Who is she?","Nothing, I was nervous","I'm in trouble","I'm hungry"],a:2,r:"Yes. Big, beautiful trouble. 😌",w:"Not even close to my brain's state 😭"},
+{q:"When did I know I liked you?",o:["Day one","After our first long chat","Slowly, then suddenly","I'm still deciding"],a:2,r:"Slowly, then all at once. Annoyingly accurate.",w:"Still deciding?! I'm hurt. (Obviously not that.)"}];
+const B=[{q:"What's my dream career?",o:["Professional footballer","Economist and entrepreneur","Professional chef","Astronaut"],a:1,r:"Okayyyy, someone has been paying attention. ❤️",w:"ASTRONAUT??? 😭 Girl, I haven't even figured out Earth yet."},
+{q:"What's my go-to comfort food?",o:["Pizza","Pasta","Burgers","Anything you're eating"],a:3,r:"Yes. I will steal your fries and I will not apologise.",w:"Wrong. You know I'm a food thief."},
+{q:"What's my most annoying habit?",o:["Being late","Overthinking","Leaving cups everywhere","All of the above"],a:3,r:"All of the above. Thank you for loving me anyway.",w:"Too generous. The list is longer."},
+{q:"What do I do when I'm stressed?",o:["Go quiet","Make jokes","Sleep","Text you"],a:0,r:"You read me like a slightly dramatic book.",w:"Nope. I go quiet. You usually notice first."}];
+const D=[{q:"What's our silliest inside joke about?",o:["A weird nickname","A bad movie","A food disaster","A wrong turn"],a:0,r:"I'm laughing just thinking about it. 😂",w:"Not that one. Ask your memory to try harder."},
+{q:"Which song feels most like us?",o:["A slow love song","A loud singalong","A throwback","Whatever's on shuffle"],a:1,r:"Windows down, terrible singing. Perfect.",w:"No no no. Our playlist deserves better."},
+{q:"What do I love most about your smile?",o:["It's contagious","It fixes my day","It's a little crooked","Yes, all of it"],a:3,r:"All of it. Nothing to add.",w:"So close. Think 'all of it'."},
+{q:"Where do we talk best?",o:["The car","A park bench","Your couch","Late-night calls"],a:3,r:"Late-night calls: where the best conversations live.",w:"Not quite. Hint: sleepy voices."}];
+const P=[
+{s:"🌙",h:"Chapter 1 · Before you"},
+{t:"Once upon a time, a boy thought he had life figured out."},
+{t:"Spoiler: he didn't."},
+{t:"He had plans, big ones, and a very full schedule. What he didn't have was someone to tell about them."},
+{t:"Then, on a completely ordinary day, something small and wonderful happened."},
+{s:"🤝",h:"Chapter 2 · The first hello"},
+{t:"You walked into my story like you'd always been in it."},
+{t:"Let's see how well you remember that day.",w:"h"},
+{q:A,n:"first hello"},
+{t:"Okay. You remember. That makes the next part easier."},
+{ph:["assets/images/1.jpg","Always leaning in"]},
+{s:"🧠",h:"Chapter 3 · Who is this guy?"},
+{t:"Soon you knew my good side. Then you met the rest of me."},
+{t:"Now, a little test. No pressure. (A little pressure.)",w:"h"},
+{q:B,n:"my brain"},
+{ph:["assets/images/2.jpg","Mirror selfie champions"]},
+{t:"Good. Now for the important part: our first real date."},
+{c:{k:"date",q:"If I'd planned our perfect first date, what was it?",o:[["a sunset picnic","Blanket, snacks, and a sky doing its best to impress you."],["dinner for two","Candles, good food, and me forgetting every word I'd rehearsed."],["a mini adventure","No plan, a lot of laughing, and a story we still tell."]]}},
+{t:()=>`${S.f.date?'So, '+S.f.date+'. Noted. I\'m stealing that idea for real.':''}`,w:"y"},
+{s:"💌",h:"Chapter 4 · The little things"},
+{t:"Love isn't the big moments, is it?"},
+{t:"It's the jokes nobody else gets, the songs we've ruined, the sleepy phone calls at midnight."},
+{q:D,n:"little things"},
+{t:"See? You were paying attention the whole time. 😌"},
+{ph:["assets/images/3.jpg","The face I'd know anywhere"]},
+{ph:["assets/images/4.jpg","Quiet moments"]},
+{s:"🗝️",h:"Chapter 5 · The night the door jammed"},
+{t:"One night we got locked in. (Fine, I've dramatised it.) The only way out? Three riddles."},
+{r:{c:"I have keys but open no doors. I have space but no room. You can enter, but you can't go outside. What am I?",a:["keyboard","a keyboard"],h:"You're probably touching one right now.",x:"Click. First lock open."}},
+{r:{c:"Where was our very first date? (One or two words)",a:["change me","cafe","the cafe"],h:"Edit this riddle in the code. 😉",x:"Second lock open. Good memory."}},
+{r:{c:"Last door. What's the name of our little world?",a:["universe","our little universe","little universe"],h:"It's the title of this story.",x:"The door swings open. 🔓"}},
+{t:"On the other side, a hidden note: 'Wherever we are, it's my favourite place.'",w:"h"},
+{s:"🧭",h:"Chapter 6 · The what-ifs"},
+{t:"Sometimes I imagine our future. Let's imagine it together."},
+{c:{k:"trip",q:"If we could vanish for a weekend, where to?",o:[["a beach house","Salt in your hair, my hoodie on your shoulders, and nobody checking the time."],["a cabin in the mountains","Fireplace, terrible card games, hot chocolate. You win every round."],["a big-city adventure","Three street stalls, one rooftop, and no map."],["somewhere new to both of us","A tiny town that feels like it was waiting for us."]]}},
+{c:{k:"future",q:"And five years from now?",o:[["building something of our own","Late nights, big dreams, a little chaos. Side by side."],["travelling everywhere","Passport stamps, and you in every photo."],["a home that feels like us","Plants, a messy shelf of memories, a door that always opens to you."]]}},
+{s:"📸",h:"Chapter 7 · Right now"},
+{t:"And here we are, a few pages later."},
+{ph:["assets/images/5.jpg","Us, 23 August"]},
+{ph:["assets/images/6.jpg","Cute, no notes"]},
+{ph:["assets/images/cover.jpg","Our favourite"]},
+{t:"There's one more page. It's the one I wrote last, and the one I meant most."},
+{s:"💖",h:"The final chapter"},
+{t:"Dear {her},",w:"h"},
+{t:"I made all of this because a text message never felt big enough.",w:"h"},
+{t:()=>`You make ordinary days feel like chapters worth keeping. You said you'd take us to ${S.f.trip||'somewhere wonderful'}, and I'm holding you to it. And in five years, ${S.f.future||'wherever we are'}? I'd choose it with you every time.`,w:"h"},
+{t:"There's one more thing I want to ask you...",w:"h"},
+{end:1}];
+/* ======== ENGINE ======== */
+const $=s=>document.querySelector(s),app=$('#app'),T=s=>String(typeof s=='function'?s():s).replace(/{her}/g,C.her).replace(/{me}/g,C.me);
+let S={i:0,f:{},v:null};try{Object.assign(S,JSON.parse(localStorage.getItem('ols2')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('ols2',JSON.stringify(S))}catch(e){}};
+let au=null,on=0,W=0,TY=0,cur=null,Z=null;
+function mus(){try{au=au||Object.assign(new Audio(C.music),{loop:true,volume:.5});on=!on;on?au.play().catch(()=>{}):au.pause();$('#mus').textContent=on?'♫':'♪'}catch(e){}}
+setInterval(()=>{const h=document.createElement('span');h.className='fl';h.textContent=Math.random()>.5?'♥':'♡';h.style.cssText=`left:${Math.random()*100}vw;font-size:${12+Math.random()*16}px;animation-duration:${8+Math.random()*6}s`;document.body.append(h);setTimeout(()=>h.remove(),14000)},2400);
+function confetti(){for(let i=0;i<70;i++){const e=document.createElement('span');e.className='fall';e.textContent=['❤️','🌸','✨','💖'][i%4];e.style.cssText=`left:${Math.random()*100}vw;font-size:${14+Math.random()*16}px;animation-duration:${2.5+Math.random()*3}s`;document.body.append(e);setTimeout(()=>e.remove(),6000)}}
+const ph=(src,cap,r=0)=>`<figure class="pol" style="--r:${r}deg"><div class="ph">📸${src?`<img src="${src}" alt="" onerror="this.remove()">`:''}</div><figcaption>${cap}</figcaption></figure>`;
+
+function title(){const p=S.i>0;app.innerHTML=`<div class="wrap"><div class="card ctr"><p class="sm">A STORY WRITTEN BY TWO ❤️</p><div class="vig" style="margin-top:18px">♡</div><p class="sm">TO ${C.her.toUpperCase()}</p><h1>Our Little<br><em>Universe.</em></h1><p class="ln" style="color:var(--mute);font-size:15px">Every love story has a beginning.<br>This one is ours. Tap to turn each page,<br>and answer when it asks you something.</p><div class="cv">${ph(C.cover,"Our favourite",-2)}</div><button class="btn" onclick="if(!on)mus();begin(${p})">${p?'Continue our story ♥':'Begin our story ♥'}</button>${p?'<br><button class="btn g" onclick="S={i:0,f:{},v:null};save();title()">Start over</button>':''}</div></div>`}
+function begin(r){app.innerHTML=`<div class="wrap"><div class="top"><div class="bar"><i id="bar"></i></div><button id="mus" aria-label="Toggle music" onclick="mus()">${on?'♫':'♪'}</button></div><div class="card" id="cd"><div class="vig" id="vg"></div><h2 id="hd"></h2><div id="pg"></div><div id="ui"></div><p class="hint" id="ht"></p></div></div>`;
+$('#cd').onclick=()=>{if(TY)fin();else if(W){W=0;S.i++;go()}};if(r&&S.v)scene(S.v);go()}
+function scene(s){$('#vg').textContent=s.s;$('#hd').textContent=s.h;$('#pg').innerHTML='';const v=$('#vg');v.style.animation='none';v.offsetWidth;v.style.animation=''}
+function go(){save();const s=P[S.i];$('#bar').style.width=S.i/P.length*100+'%';$('#ui').innerHTML='';$('#ht').textContent='';W=0;if(!s)return;
+if(s.s){S.v=s;scene(s);S.i++;return go()}
+if(s.t!==undefined)return line(s);
+if(s.ph){$('#pg').insertAdjacentHTML('beforeend',ph(s.ph[0],s.ph[1],[-3,2,-2][S.i%3]));S.i++;return W=1,$('#ht').textContent='TAP TO CONTINUE',void 0}
+if(s.q)return quiz(s);if(s.c)return choice(s);if(s.r)return riddle(s);if(s.end)return ask()}
+function line(s){const x=T(s.t),p=document.createElement('p');if(!x){S.i++;return go()}p.className='ln '+(s.w||'');$('#pg').append(p);let k=0;cur={p,x};TY=setInterval(()=>{p.textContent=x.slice(0,++k);if(k>=x.length)fin()},24)}
+function fin(){clearInterval(TY);TY=0;cur.p.textContent=cur.x;W=1;$('#ht').textContent='TAP TO CONTINUE';scrollTo({top:document.body.scrollHeight,behavior:'smooth'})}
+const next=`S.i++;go()`;
+/* quiz */
+function quiz(s){Z={s,i:0,n:0};qz()}
+function qz(){const q=Z.s.q[Z.i];Z.l=0;$('#ui').innerHTML=`<p class="prog">MEMORY TEST · ${Z.i+1} OF ${Z.s.q.length}</p><p class="q">${q.q}</p>${q.o.map((o,j)=>`<button class="opt" onclick="ans(${j},this)">${o}</button>`).join('')}<div id="fb"></div>`;$('#ui').scrollIntoView({behavior:'smooth',block:'start'})}
+function ans(j,b){if(Z.l)return;Z.l=1;const q=Z.s.q[Z.i],ok=j==q.a;if(ok)Z.n++;document.querySelectorAll('.opt').forEach((o,x)=>{o.disabled=1;if(x==q.a)o.classList.add('right')});if(!ok)b.classList.add('wrong');
+const last=Z.i==Z.s.q.length-1;$('#fb').innerHTML=`<div class="fb">${ok?q.r:q.w}</div><button class="btn" onclick="${last?'qend()':'Z.i++;qz()'}">${last?'Finish ♥':'Next ›'}</button>`}
+function qend(){const n=Z.s.q.length;if(Z.n/n>=.7){$('#ui').innerHTML=`<p class="ln h ctr">${Z.n}/${n} 🎉 Someone has been paying attention.</p><button class="btn" onclick="${next}">Continue the story ›</button>`}
+else $('#ui').innerHTML=`<p class="ln h ctr">${Z.n}/${n}. So close! I'm not mad. You were just distracted by how handsome I am. Let's rewind and try again.</p><button class="btn" onclick="quiz(P[S.i])">Rewind ↺</button>`}
+/* choices */
+function choice(s){const c=s.c;$('#ui').innerHTML=`<p class="q">${c.q}</p>${c.o.map((o,j)=>`<button class="opt" onclick="pick(${j})">${o[0]}</button>`).join('')}<div id="fb"></div>`;$('#ui').scrollIntoView({behavior:'smooth',block:'start'})}
+function pick(j){const c=P[S.i].c;S.f[c.k]=c.o[j][0];save();document.querySelectorAll('.opt').forEach((o,x)=>{o.disabled=1;if(x==j)o.classList.add('right')});$('#fb').innerHTML=`<p class="ln y" style="margin-top:14px">${c.o[j][1]}</p><button class="btn" onclick="${next}">Continue ›</button>`}
+/* riddles */
+function riddle(s){$('#ui').innerHTML=`<p class="q">${s.r.c}</p><input id="in" placeholder="Type your answer" autocomplete="off" onkeydown="if(event.key=='Enter')chk()"><button class="btn" onclick="chk()">Unlock</button><button class="btn g" onclick="$('#fb').innerHTML='<div class=fb>Hint: '+P[S.i].r.h+'</div>'">Hint</button><div id="fb"></div>`}
+function chk(){const r=P[S.i].r;if(r.a.includes($('#in').value.trim().toLowerCase()))$('#ui').innerHTML=`<div class="fb">${r.x}</div><button class="btn" onclick="${next}">Continue ›</button>`;else $('#fb').innerHTML='<div class=fb>Not quite. Breathe and try again. 💭</div>'}
+/* finale */
+function ask(){$('#ui').innerHTML=`<p class="q ctr" style="margin-top:20px">${C.her}, will you go on a date with me?</p><div class="ctr"><button class="btn" onclick="yes()">Yes ❤️</button><button class="btn g" onmouseover="dodge(this)" ontouchstart="dodge(this)" onclick="dodge(this)">No</button></div>`}
+function dodge(b){b.style.cssText=`position:fixed;left:${10+Math.random()*70}vw;top:${15+Math.random()*70}vh;z-index:9;background:var(--card)`;b.textContent=['Nice try 😏','Wrong button','Not today','Try yes?'][Math.floor(Math.random()*4)]}
+function yes(){confetti();$('#ui').innerHTML=`<div class="ctr"><div class="vig">🥰</div><p class="ln h">She said yes!!!</p><p class="ln" style="font-size:15px"><b>${C.date}</b><br>${C.plan}</p><button class="btn g" onclick="S={i:0,f:{},v:null};save();title()">Read our story again</button></div>`}
+title();
+</script>
+</body>
+</html>
